@@ -51,7 +51,8 @@ void detectar_ir(){
   int res = IrReceiver.decodedIRData.decodedRawData; // Print "old" raw data
   IrReceiver.resume(); 
     
-    
+    //REFACTORIZAR , NO ES SOLO APAGAR Y PRENDER
+	// ES INDICAR CON LOS BOTONES DEL CONTROL REMOTO EN QUE ESTACION DEL AÑO ESTAMOS.
   if(IrReceiver.decodedIRData.decodedRawData == 0xFF00BF00){
      activar_sistema = !activar_sistema;
   }
